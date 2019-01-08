@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway'>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>LDC Articles to Article Results</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <style>
+  	html,body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+	</style>
+</head>
+		<img src="/static/lawyers.PNG" alt="Lawyers" >
+
+<div style='padding: 10px; '>	
+	<h1 style = 'margin:0;font-family:Raleway;'>Related Topics Results (Articles to Articles)</h1>		
+	<p style = 'top-margin:15px'>Click to see another post</p>
+	
+			
+	<form method='GET' action="/">
+		<p>Article ID: <input type='text' name='articleid' placeholder=0></p>
+
+		<p><input type='submit' value='Generate'/></p>
+	</form>
+</div>
+
+<body style="background-color:#FFFFFF">
+
+<div class='w3-card-4 w3-margin' style='background-color:#F5F5F5; padding: 10px; width:98%'>
+	<h3> Test Article </h3>
+	<p> {{variable.thread_id}} </p>
+	<!--<p> Title: {{variable.test_title}} </p> -->
+	<a href={{variable.test_link}}>{{variable.article_title}} </a>
+	<p> {{variable.test_string}} </p>
+</div>
+
+<div class = 'row' style='text-align: center'>
+
+
+	<div class='column w3-card-4 w3-margin' style='background-color:#f7f3fe;'>
+		<button onclick="send_and_reload(1,0)" style="text-align: center;">Choose this model</button>
+		<h3> Results A</h3>
+		<div>
+			<p> {{variable.sequoia_id_0_1}} </p>
+			<p> {{variable.simil_0_1}} </p>
+			<a href={{variable.link_0_1}}>{{variable.title_0_1}} </a>
+			<p> {{variable.text_0_1}} </p>
+		</div>
+
+		<hr>
+
+		<div>
+			<p> {{variable.sequoia_id_1_1}} </p>
+			<p> {{variable.simil_1_1}} </p>
+			<a href={{variable.link_1_1}}>{{variable.title_1_1}} </a>
+			<p> {{variable.text_1_1}} </p>
+		</div>
+
+		<hr>
+
+		<div>
+			<p> {{variable.sequoia_id_2_1}} </p>
+			<p> {{variable.simil_2_1}} </p>
+			<a href={{variable.link_2_1}}>{{variable.title_2_1}} </a>
+			<p> {{variable.text_2_1}} </p>
+		</div>
+
+		<hr>
+
+		<div>
+			<p> {{variable.sequoia_id_3_1}} </p>
+			<p> {{variable.simil_3_1}} </p>
+			<a href={{variable.link_3_1}}>{{variable.title_3_1}} </a>
+			<p> {{variable.text_3_1}} </p>
+		</div>
+
+		<hr>
+
+		<div>
+			<p> {{variable.sequoia_id_4_1}} </p>
+			<p> {{variable.simil_4_1}} </p>
+			<a href={{variable.link_4_1}}>{{variable.title_4_1}} </a>
+			<p> {{variable.text_4_1}} </p>
+		</div>
+
+	</div>
+
+	<div class='column w3-card-4 w3-margin' style='background-color:#e1ecf4;'>
+		<button onclick="send_and_reload(0,1)" style="text-align: center;">Choose this model</button>
+		<h3> Results B </h3>
+		<div>
+			<p> {{variable.sequoia_id_0_2}} </p>
+			<p> {{variable.simil_0_2}} </p>
+			<a href={{variable.link_0_2}}>{{variable.title_0_2}} </a>
+			<p> {{variable.text_0_2}} </p>
+		</div>
+		
+		<hr>
+		
+		<div>
+			<p> {{variable.sequoia_id_2_2}} </p>
+			<p> {{variable.simil_1_2}} </p>
+			<a href={{variable.link_1_2}}>{{variable.title_1_2}} </a>
+			<p> {{variable.text_1_2}} </p>
+		</div>
+		
+		<hr>
+		
+		<div>
+			<p> {{variable.sequoia_id_2_2}} </p>
+			<p> {{variable.simil_2_2}} </p>
+			<a href={{variable.link_2_2}}>{{variable.title_2_2}} </a>
+			<p> {{variable.text_2_2}} </p>
+		</div>
+		
+		<hr>
+
+		<div>
+			<p> {{variable.sequoia_id_3_2}} </p>
+			<p> {{variable.simil_3_2}} </p>
+			<a href={{variable.link_3_2}}>{{variable.title_3_2}} </a>
+			<p> {{variable.text_3_2}} </p>
+		</div>
+		
+		<hr>
+		
+		<div>
+			<p> {{variable.sequoia_id_4_2}} </p>
+			<p> {{variable.simil_4_2}} </p>
+			<a href={{variable.link_4_2}}>{{variable.title_4_2}} </a>
+			<p> {{variable.text_4_2}} </p>
+		</div>
+	</div>
+
+</div>	
+
+
+<script>
+function send_and_reload(x,y) {
+	var urlEncodedData = "";
+  var urlEncodedDataPairs = [];
+  var XHR = new XMLHttpRequest();
+
+  urlEncodedDataPairs.push(encodeURIComponent('articleid') + '=' + encodeURIComponent(''))
+  urlEncodedDataPairs.push(encodeURIComponent('left') + '=' + encodeURIComponent(x))
+  urlEncodedDataPairs.push(encodeURIComponent('right') + '=' + encodeURIComponent(y))
+	urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+  XHR.open('POST', '/');
+  XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  XHR.send(urlEncodedData);
+  location.reload();
+}
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>LDC Articles to Article Results</title>
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway'>
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+	<style>
+		html,body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+		table {
+	  font-family: Raleway, sans-serif;
+	  border-collapse: collapse;
+	  width: 50%;
+		}
+
+		td, th {
+		  border: 1px solid #dddddd;
+		  text-align: left;
+		  padding: 8px;
+		}
+
+		tr:nth-child(even) {
+		  background-color: #dddddd;
+		}
+	</style>
+
+</head>
+	<img src="/static/lawyers.PNG" alt="Lawyers" >
+
+
+<body style="background-color:#FFFFFF">
+
+	<div style='padding: 10px; '>	
+		<h1 style = 'margin:0;font-family:Raleway;'>Related Topics Summary</h1>		
+	</div>
+
+	<div class= '' style='padding: 10px;'>
+		<h5> Counts </h5>
+		<table>
+			<tr>
+				<th>Model 3</th>
+				<th>Model 4</th>
+			</tr>
+			<tr>
+				<td>{{variable.model1count}}</td>
+				<td>{{variable.model2count}}</td>
+			</tr>
+		</table>
+	</div>
+
+	<div style='padding: 10px;'>
+		<h5> Z-test </h5>
+		<p>{{variable.N}}</p>
+		<p>{{variable.zscore}}</p>
+		<p>{{variable.pval}}</p>
+		<p>{{variable.t_test_message}}</p>
+	</div>
+
+</body>
+</html>
