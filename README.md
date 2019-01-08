@@ -2,7 +2,7 @@
 
 This repo contains two basic setups to host a Flask server that can be used to demo
 a model for the business team. One is a general page to show the result, and the other
-is designed to perform on-the-fly AB testing, which is useful in objectively choosing
+is designed to perform on-the-fly A/B testing, which is useful in objectively choosing
 between two models. To make this easier to copy+paste, I have used an
 existing setup to easily show how it works and where to replace values.
 
@@ -11,12 +11,12 @@ Sample Page (running flask_script.py & generate_page.html)
   <img width="1500" src="extra/page_sample.PNG">
 </p>
 
-Sample AB-testing page (running flask_script_ab_testing.py & generate_page_abtesting.html)
+Sample A/B-testing page (running flask_script_ab_testing.py & generate_page_abtesting.html)
 <p align="center">
   <img width="1500" src="extra/ab_test.PNG">
 </p>
 
-AB-testing summary page (ab_test_summary.html)
+A/B-testing summary page (ab_test_summary.html)
 <p align="center">
   <img width="1500" src="extra/ab_test_summary.PNG">
 </p>
